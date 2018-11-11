@@ -81,7 +81,7 @@
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin></Button>
-            <TextField maxHeight="Infinity" maxWidth="Infinity" styleClass="textFieldStil" stylesheets="@digitron.css" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <TextField text="$controller.tekstPolje" maxHeight="Infinity" maxWidth="Infinity" styleClass="textFieldStil" stylesheets="@digitron.css" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                </GridPane.margin>
