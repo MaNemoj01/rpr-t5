@@ -18,31 +18,7 @@ public class Controller {
         operacija = new SimpleStringProperty("=");
     }
 
-
-    public void btnOperacijaPosto(ActionEvent actionEvent) {
-        broj2 = new SimpleStringProperty( broj1.get());
-        broj1.set("");
-        operacija.set("%");
-    }
-
-    public void btnOperacijaDijeljenje(ActionEvent actionEvent) {
-        broj2 = new SimpleStringProperty( broj1.get());
-        broj1.set("");
-        operacija.set("/");
-    }
-
-    public void btnOperacijaPuta(ActionEvent actionEvent) {
-        broj2 = new SimpleStringProperty( broj1.get());
-        broj1.set("");
-        operacija.set("*");
-    }
-
-    public void btnOperacijaMinus(ActionEvent actionEvent) {
-        broj2 = new SimpleStringProperty( broj1.get());
-        broj1.set("");
-        operacija.set("-");
-    }
-
+    //brojevi
     public void btnBroj1(ActionEvent actionEvent) {
         if(broj1.get().equals("0"))
             broj1.set("");
@@ -114,6 +90,33 @@ public class Controller {
     public void btnTacka(ActionEvent actionEvent) {
         broj1.set(new String(broj1.get()+"."));
     }
+
+    // operacije
+
+    public void btnOperacijaPosto(ActionEvent actionEvent) {
+        broj2 = new SimpleStringProperty( broj1.get());
+        broj1.set("");
+        operacija.set("%");
+    }
+
+    public void btnOperacijaDijeljenje(ActionEvent actionEvent) {
+        broj2 = new SimpleStringProperty( broj1.get());
+        broj1.set("");
+        operacija.set("/");
+    }
+
+    public void btnOperacijaPuta(ActionEvent actionEvent) {
+        broj2 = new SimpleStringProperty( broj1.get());
+        broj1.set("");
+        operacija.set("*");
+    }
+
+    public void btnOperacijaMinus(ActionEvent actionEvent) {
+        broj2 = new SimpleStringProperty(broj1.get());
+        broj1.set("");
+        operacija.set("-");
+    }
+
     @FXML
     public void btnJednako(ActionEvent actionEvent) {
         String pomocni ="";
@@ -133,12 +136,5 @@ public class Controller {
         broj1.set(String.valueOf(rezultat));
         broj2.set("0");
         operacija.set("=");
-    }
-
-    public SimpleStringProperty broj1Property(){
-        return broj1;
-    }
-    public  String getbroj1(){
-        return broj1.get();
     }
 }
