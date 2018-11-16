@@ -4,9 +4,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-
-
 public class Controller {
+
     private SimpleStringProperty broj1;
     private SimpleStringProperty broj2;
     private SimpleStringProperty operacija;
@@ -123,15 +122,15 @@ public class Controller {
         double rezultat=0;
         if(operacija.get().equals("+"))
             rezultat= Double.parseDouble(broj1.get()) + Double.parseDouble(broj2.get());
-        if(operacija.get().equals("-"))
+        else if(operacija.get().equals("-"))
             rezultat= Double.parseDouble(broj1.get()) - Double.parseDouble(broj2.get());
-        if(operacija.get().equals("="))
+        else if(operacija.get().equals("="))
             rezultat= Double.parseDouble(broj1.get());
-        if(operacija.get().equals("*"))
+        else if(operacija.get().equals("*"))
             rezultat= Double.parseDouble(broj1.get()) * Double.parseDouble(broj2.get());
-        if(operacija.get().equals("%"))
+        else if(operacija.get().equals("%"))
             rezultat= Double.parseDouble(broj2.get())*(1/100)* Double.parseDouble(broj1.get());
-        if(operacija.get().equals("/"))
+        else if(operacija.get().equals("/"))
             rezultat= Double.parseDouble(broj2.get()) / Double.parseDouble(broj1.get());
         broj1.set(String.valueOf(rezultat));
         broj2.set("0");
